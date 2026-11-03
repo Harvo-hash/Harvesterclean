@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvester Cleaning Co. | Trusted Home & Office Cleaning Nairobi</title>
+    <style>
+        /* Base Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #05a66b; /* Fresh green representing clean harvest */
+            --secondary: #132238; /* Trustworthy deep navy */
+            --accent: #ff7675; /* Eye-catching promo red */
+            --light-bg: #f5f9f7; /* Soft background */
+            --text-dark: #2d3748;
+            --white: #ffffff;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Promo Bar */
+        .promo-bar {
+            background: var(--accent);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .phone-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(19, 34, 56, 0.8), rgba(19, 34, 56, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
+            padding: 110px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(5, 166, 107, 0.3);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background: #048d5a;
+            transform: translateY(-2px);
+        }
+
+        /* Core Structure Sections */
+        .section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        /* Grid Framework */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 100fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 12px;
+            font-size: 19px;
+        }
+
+        .bg-light {
+            background: var(--light-bg);
+        }
+
+        /* Meet Harvo Section Custom Split Layout */
+        .about-split {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-img-box {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .about-img-placeholder {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            border: 5px solid var(--primary);
+            color: var(--secondary);
+            overflow: hidden;
+        }
+
+        .about-text-box {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text-box h3 {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .about-text-box p {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Call To Action Box */
+        .cta-box {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 50px 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .cta-box p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .phone-btn {
+            background: var(--white);
+            color: var(--secondary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .phone-btn:hover {
+            background: #f7fafc;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1726;
+            color: #718096;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 14px;
+            border-top: 1px solid #132238;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 30px; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .about-split { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grand Opening Deal -->
+    <div class="promo-bar">
+        ✨ GRAND OPENING SPECIAL: Save 15% On Your First Booking!
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Harvester <span>Cleaning Co.</span></div>
+            <a href="tel:+254722165793" class="phone-link">📞 Call / Text: +254 722 165 793</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>We Harvest the Dirt, You Keep the Shine</h1>
+        <p>Reliable, thorough, and premium local cleaning services across Nairobi and Environs.</p>
+        <a href="#quote" class="btn">Get a Free Estimate</a>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="section">
+        <h2 class="section-title">Why Our Clients Choose Us</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🧼</div>
+                <h3>100% Satisfaction Guarantee</h3>
+                <p>Your satisfaction is our absolute standard. If you aren't completely happy with any spot, we will reclean it completely free of charge.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Trusted & Fully Insured</h3>
+                <p>Operating with tight attention to detail, strong local accountability, and full safety protections for total peace of mind.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🕒</div>
+                <h3>Dependable & Professional</h3>
+                <p>We honor your schedule. Our team arrives right on time equipped with premium supplies to handle the job flawlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section bg-light">
+        <h2 class="section-title">Our Specialized Services</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🏠</div>
+                <h3>Standard Residential Clean</h3>
+                <p style="margin-top: 10px;">Perfect recurring care for busy homes. Includes dusting, vacuuming, mopping, deep bathroom sanitization, and kitchen surface wipe-downs.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Deep Detail / Move-Out Clean</h3>
+                <p style="margin-top: 10px;">A heavy-duty top-to-bottom scrub. Ideal if you are moving houses, welcoming new tenants, or doing seasonal cleaning.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏢</div>
+                <h3>Commercial Office Care</h3>
+                <p style="margin-top: 10px;">Maintain a sharp workspace. Tailored cleaning setups for local retail shops, corporate suites, and business environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Owner / Lead Cleaner Section -->
+    <section class="section">
+        <h2 class="section-title">Behind the Clean</h2>
+        <div class="about-split">
+            <div class="about-img-box">
+                <!-- Replace the 🤵 emoji inside this div later with a real image link: <img src="your-photo.jpg" alt="Harvo" style="width:100%; height:100%; object-fit:cover;"> -->
